@@ -44,38 +44,12 @@
 .row
   h1 Aktualności Prawne
   .large-4.columns.large-push-8
-    ul.side-nav.panel.callout.radius
-      li.heading Kategorie
-      li
-        a href='#' Lorem ipsum
-      li
-        a href='#' Lorem ipsum
-      li
-        a href='#' Lorem ipsum
-      li
-        a href='#' Lorem ipsum
-      li
-        a href='#' Lorem ipsum
-      li
-        a href='#' Lorem ipsum
-      li
-        a href='#' Lorem ipsum
+    == render 'news/categories'
   .large-8.columns.large-pull-4
-    .row
-      .panel
-        h3 Lorem ipsum
-        p
-          ' Lorem ipsum dolor sit amet, maiores ornare ac fermentum, imperdiet ut vivamus a, nam lectus at nunc. Quam euismod sem, semper ut potenti pellentesque quisque. In eget sapien sed,
-          a href='#' ...
-    .row
-      .panel
-        h3 Lorem ipsum
-        p
-          ' Lorem ipsum dolor sit amet, maiores ornare ac fermentum, imperdiet ut vivamus a, nam lectus at nunc. Quam euismod sem, semper ut potenti pellentesque quisque. In eget sapien sed,
-          a href='#' ...
-    .row
-      .panel
-        h3 Lorem ipsum
-        p
-          ' Lorem ipsum dolor sit amet, maiores ornare ac fermentum, imperdiet ut vivamus a, nam lectus at nunc. Quam euismod sem, semper ut potenti pellentesque quisque. In eget sapien sed,
-          a href='#' ...
+    - for item in @news
+      .row
+        .panel
+          h3 = item.title
+          p
+            = item.abstract
+            a href='#' ...

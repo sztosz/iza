@@ -14,6 +14,8 @@ gem 'foundation-rails'
 gem 'high_voltage'
 gem 'slim-rails'
 gem 'devise'
+gem 'foundation-wysihtml5-rails'
+gem 'font-awesome-sass'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
