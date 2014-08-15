@@ -1,5 +1,5 @@
 class VisitorsController < ApplicationController
   def index
-    @news = News.all
+    @stories = Story.all
   end
 end

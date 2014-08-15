@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :news
+  resources :story
+  resources :category
   devise_for :admins
   root to: 'visitors#index'
 end

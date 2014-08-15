@@ -1,0 +1,15 @@
+.row
+  h1 Aktualności Prawne
+  .large-4.columns.large-push-8
+    == render 'story/categories'
+  .large-8.columns.large-pull-4
+    - for story in @stories
+      .row
+        .panel
+          h3
+            = story.title
+            span.label.radius.right = story.category.name
+          p
+            = story.abstract
+            a href=story_path(story.id) ="Czytaj więcej..."
+          small = 'Autor: ' + story.admin.name + ' ' + story.admin.surname
