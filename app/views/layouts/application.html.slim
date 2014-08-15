@@ -3,7 +3,7 @@ html
   head
     meta[name="viewport" content="width=device-width, initial-scale=1.0"]
     title
-      = content_for?(:title) ? yield(:title) : 'Iza'
+      = content_for?(:title) ? yield(:title) : 'Kancelaria'
     meta name="description" content="#{content_for?(:description) ? yield(:description) : 'Iza'}"
     == stylesheet_link_tag "application", :media => 'all', 'data-turbolinks-track' => true
     / Modernizr is required for Zurb Foundation
@@ -16,3 +16,5 @@ html
     main[role="main"]
       == render 'layouts/messages'
       == yield
+    footer
+      == render 'layouts/footer'

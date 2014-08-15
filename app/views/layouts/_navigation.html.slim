@@ -1,11 +1,48 @@
 / navigation styled for Zurb Foundation 5
-nav.top-bar[data-topbar]
-  ul.title-area
-    li.name
-      = link_to 'Home', root_path
-    li.toggle-topbar.menu-icon
-      a[href="#"]
-        Menu
-  .top-bar-section
-    ul
-      == render 'layouts/navigation_links'
+.row
+  .large-4.columns
+    img src='http://placehold.it/600x200'
+  .large-8.columns
+    .row
+      .large-9.columns
+      .large-3.columns
+        ul.small-block-grid-3
+          li
+            img src='http://placehold.it/150x150' href='#'
+          /   TODO: How the hell do you make img with link in slim? ASK ON FORUM
+          li
+            img src='http://placehold.it/150x150'
+          li
+            img src='http://placehold.it/150x150'
+    .row
+      .large-12.columns
+        .contain-to-grid.sticky.fixed
+        nav.top-bar data-topbar=true
+          ul.title-area
+            li.name
+            li.toggle-topbar.menu-icon href='#'
+          section.top-bar-section
+            /<!-- Right Nav Section -->
+            ul.right
+              li
+                a.upper href='#' Kancelaria
+              li
+                a.upper href='#' Usługi Prawne
+              li
+                a.upper href='#' Porady on-line
+              li
+                a.upper href='#' Kalkulatory
+              li
+                a.upper href='#' Kontakt
+
+
+/nav.top-bar[data-topbar]
+/  ul.title-area
+/    li.name
+/      = link_to 'Home', root_path
+/    li.toggle-topbar.menu-icon
+/      a[href="#"]
+/        Menu
+/  .top-bar-section
+/    ul
+/      == render 'layouts/navigation_links'
