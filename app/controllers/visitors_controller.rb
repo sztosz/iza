@@ -1,5 +1,6 @@
 class VisitorsController < ApplicationController
   def index
-    @stories = Story.all
+    @articles = Article.all
+    @categories = Category.all
   end
 end

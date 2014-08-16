@@ -1,0 +1,15 @@
+.row
+  h1 Aktualności Prawne
+  .large-4.columns.large-push-8
+    == render 'categories/categories'
+  .large-8.columns.large-pull-4
+    - for article in @articles
+      .row
+        .panel
+          h3
+            = article.title
+            span.label.radius.right = article.category.name
+          p
+            = article.abstract
+            a href=article_path(article.id) ="Czytaj więcej..."
+          small = 'Autor: ' + article.admin.name + ' ' + article.admin.surname

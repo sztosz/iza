@@ -17,6 +17,6 @@ puts 'Categories created'
 
 puts 'SETTING UP TEST NEWS'
 10.times do
-  news = Story.create! :title => 'TEST TITLE', :content => 'Test content ' * 20, :abstract => 'Test abstract ' * 3, :category => Category.find(1 + Random.rand(2)), :admin => Admin.find(1)
-  puts 'Test Story created: ' << news.title
+  news = Article.create! :title => 'TEST TITLE', :content => 'Test content ' * 20, :abstract => 'Test abstract ' * 3, :admin => Admin.find(1), :category => Category.find(1 + Random.rand(2))
+  puts 'Test Article created: ' << news.title
 end
