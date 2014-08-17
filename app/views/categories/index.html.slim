@@ -1,11 +1,7 @@
 .row
   .small-6.column
     .row
-      ul.side-nav.panel.callout.radius
-        li.heading Kategorie
-        - for category in @categories
-          li
-            a href='#' = category.name
+      == render 'categories/categories'
 
   .small-6.column
     h1 buttons

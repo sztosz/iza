@@ -14,12 +14,10 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require foundation
+//= require tinymce-jquery
 //= require_tree .
-//= require foundation-wysihtml5
-//= require foundation-wysihtml5/locales/pl-PL
-$(function() {
+
+//
+$(document).ready(function() {
   $(document).foundation();
-  $(document).on('page:load', function(){
-    window['rangy'].initialized = false
-  });
 });

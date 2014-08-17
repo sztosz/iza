@@ -3,7 +3,7 @@
     h1 Aktualności Prawne
   .row
     nav.breadcrumbs.large-4.columns
-      a href=article_index_path Aktualności
+      a href=articles_path Aktualności
       a href=category_path =@article.category.name
       a.current href=article_path =@article.title
   .row
@@ -14,4 +14,4 @@
         .panel
           h3 = @article.title
           p
-            = @article.content
+            = @article.content.html_safe

@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.1.2'
+# ruby '2.1.2'
 gem 'rails', '4.1.4'
 gem 'sqlite3'
 gem 'sass-rails', '~> 4.0.3'
@@ -14,8 +14,9 @@ gem 'foundation-rails'
 gem 'high_voltage'
 gem 'slim-rails'
 gem 'devise'
-gem 'foundation-wysihtml5-rails'
-gem 'font-awesome-sass'
+gem 'tinymce-rails'
+gem 'font-awesome-rails'
+gem 'simple_form'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
@@ -41,3 +42,4 @@ group :test do
   gem 'launchy'
   gem 'selenium-webdriver'
 end
+gem 'tzinfo-data', platforms: [:mingw, :mswin]

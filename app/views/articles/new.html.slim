@@ -1,14 +1,14 @@
 .row
   h1 Dodaj Artykuł
-  =form_for(@article) do |f|
+  =simple_form_for(@article) do |f|
     =render 'articles/error_messages'
-    =f.label :title
-    =f.text_field :title
-    =f.label :abstract
-    =f.text_area :abstract
-    =f.label :content
-    =f.text_area :content
-    =collection_select(:articles, :category_id, Category.all, :id, :name)
-    =collection_select(:articles, :admin_id, Admin.all, :id, :email)
-    =f.submit 'Dodaj Artykuł'
+    =f.input :title
+    =f.input :abstract, input_html: { :class => 'tinymce', :rows => 5}
+    =f.input :content, input_html: { :class => 'tinymce', :rows => 20}
+    /=f.collection_select(:category_id, Category.all, :id, :name, prompt: true)
+    /=f.collection_select(:admin_id, Admin.all, :id, :email, prompt: true)
+    =f.association  :category
+    =f.association  :admin
 
+    =f.submit 'Dodaj Artykuł'
+  =tinymce

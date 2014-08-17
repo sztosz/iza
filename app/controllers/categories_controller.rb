@@ -4,7 +4,9 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @category = Category.find(params[:id])
+    category = Category.find(params[:id])
+    @articles = Article.where category: category
+    @categories = Category.all
   end
 
   def new
@@ -14,8 +16,8 @@ class CategoriesController < ApplicationController
   def create
     @category = Category.new(category_params)
     if @category.save
-      flash[:success] = 'Kategoria dodana poprawnie'
-      redirect_to
+      flash[:notice] = 'Kategoria dodana poprawnie'
+      redirect_to articles_path
     else
       render 'new'
     end

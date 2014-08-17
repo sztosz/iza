@@ -16,7 +16,8 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     if @article.save
-
+      flash[:notice] = 'Artykuł dodany poprawnie'
+      redirect_to articles_path
     else
       render 'new'
     end
@@ -25,6 +26,6 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:title, :abstract, :content, :category, :admin)
+    params.require(:article).permit(:title, :abstract, :content, :category_id, :admin_id)
   end
 end
