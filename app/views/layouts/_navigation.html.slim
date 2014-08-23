@@ -9,7 +9,9 @@
       .large-3.columns
         ul.large-block-grid-3
           li
-            img src='http://placehold.it/150x150' href='#'
+            = link_to articles_path
+              img src='http://placehold.it/150x150'
+
           /   TODO: How the hell do you make img with link in slim? ASK ON FORUM
           li
             img src='http://placehold.it/150x150'
@@ -17,24 +19,41 @@
             img src='http://placehold.it/150x150'
     .row
       .large-12.columns
-        .contain-to-grid.fixed
-        nav.top-bar data-topbar=true data-options='sticky_on: large'
-          ul.title-area
-            li.name
-            li.toggle-topbar.menu-icon href='#'
-          section.top-bar-section
-            /<!-- Right Nav Section -->
-            ul.right
-              li
-                a.upper href='#' Kancelaria
-              li
-                a.upper href='#' Usługi Prawne
-              li
-                a.upper href='#' Porady on-line
-              li
-                a.upper href='#' Kalkulatory
-              li
-                a.upper href='#' Kontakt
+        .contain-to-grid.sticky
+          nav.top-bar data-topbar=true data-options='sticky_on: large'
+            ul.title-area
+              li.name
+              li.toggle-topbar.menu-icon href='#'
+            section.top-bar-section
+              /<!-- Right Nav Section -->
+              ul.right
+                li.has-dropdown
+                  a.upper href='#' Kancelaria
+                  ul.dropdown
+                    li
+                      a.upper href=about_path O Kancelarii
+                    li
+                      a.upper href='#' O Nas
+                li.has-dropdown
+                  a.upper href='#' Usługi
+                  ul.dropdown
+                    li
+                      a.upper href='#' Zakres Usług Prawnych
+                    li
+                      a.upper href='#' Cennik
+                li
+                  a.upper href='#' Porady on-line
+                li.has-dropdown
+                  a.upper href='#' Kalkulatory
+                  ul.dropdown
+                    li
+                      a.upper href='#' Kalkulator Odsetek Ustawowych
+                    li
+                      a.upper href='#' Kalkulator Opłat Sądowych
+                    li
+                      a.upper href='#' Kalkulator Alimentów
+                li
+                  a.upper href='#' Kontakt
 
 
 /nav.top-bar[data-topbar]

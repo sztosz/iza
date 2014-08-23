@@ -1,0 +1,11 @@
+.row
+    h2 Zaloguj się
+.row
+  .large-8
+    = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      = f.input :email, required: false, autofocus: true
+      = f.input :password, :label => 'Hasło', required: false
+      = f.input :remember_me, as: :boolean if devise_mapping.rememberable?
+      = f.button :submit, "Zaloguj się"
+.row
+  = render "devise/shared/links"

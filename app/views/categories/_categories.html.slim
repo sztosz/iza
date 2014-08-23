@@ -2,4 +2,12 @@ ul.side-nav.panel.callout.radius
   li.heading Kategorie
   - for category in @categories
     li
-      a href=category_path(category.id) =category.name
+      ul.inline-list
+        li
+          a href=category_path(category.id) =category.name
+        - if admin_signed_in?
+          li
+            a.button.tiny href=edit_category_path(category.id) Edytuj Kategorię
+
+- if admin_signed_in?
+  a.button href=new_category_path Dodaj Kategorię

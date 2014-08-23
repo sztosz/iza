@@ -1,0 +1,10 @@
+=simple_form_for(@article) do |f|
+  == render 'articles/error_messages'
+  = f.input :title
+  = f.input :abstract, input_html: { :class => 'tinymce', :rows => 5}
+  = f.input :content, input_html: { :class => 'tinymce', :rows => 20}
+  /=f.collection_select(:category_id, Category.all, :id, :name, prompt: true)
+  /=f.collection_select(:admin_id, Admin.all, :id, :email, prompt: true)
+  = f.association  :category
+  = f.association  :admin
+  = f.button :submit, @submit_name

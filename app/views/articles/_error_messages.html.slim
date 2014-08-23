@@ -3,7 +3,7 @@
     .alert.alert-error
       p
         ' The form contains
-        =pluralize(@article.errors.count, "error")
+        = pluralize(@article.errors.count, "error")
     ul
       - @article.errors.full_messages.each do |msg|
         li = msg
