@@ -1,68 +1,60 @@
 / navigation styled for Zurb Foundation 5
 .row
-  .large-4.columns
-    .row
-      img src='http://placehold.it/600x200'
-  .large-8.columns
-    .row
-      .large-9.columns
-      .large-3.columns
-        ul.large-block-grid-3
-          li
-            = link_to articles_path
-              img src='http://placehold.it/150x150'
-
-          /   TODO: How the hell do you make img with link in slim? ASK ON FORUM
-          li
-            img src='http://placehold.it/150x150'
-          li
-            img src='http://placehold.it/150x150'
-    .row
-      .large-12.columns
-        .contain-to-grid.sticky
-          nav.top-bar data-topbar=true data-options='sticky_on: large'
-            ul.title-area
-              li.name
-              li.toggle-topbar.menu-icon href='#'
-            section.top-bar-section
-              /<!-- Right Nav Section -->
-              ul.right
-                li.has-dropdown
-                  a.upper href='#' Kancelaria
-                  ul.dropdown
-                    li
-                      a.upper href=about_path O Kancelarii
-                    li
-                      a.upper href='#' O Nas
-                li.has-dropdown
-                  a.upper href='#' Usługi
-                  ul.dropdown
-                    li
-                      a.upper href='#' Zakres Usług Prawnych
-                    li
-                      a.upper href='#' Cennik
+  .small-2.small-push-10.column
+    .ul.small-block-grid-3
+      li
+        a.item href=root_path
+          img src='http://placehold.it/20x20'
+      li
+        a.item href='#'
+          img src='http://placehold.it/20x20'
+      li
+        a.item href='#'
+          img src='http://placehold.it/20x20'
+.row
+  .contain-to-grid.sticky
+    nav.top-bar data-topbar=true role='navigation' data-options='sticky_on: large'
+      section.top-bar-section
+        ul.title-area
+          li.name
+            h1
+              a.upper href=root_path Strona Główna
+            /<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+          li.toggle-topbar.menu-icon
+            a.upper href="#"
+              span
+        /<!-- Right Nav Section -->
+        section.top-bar-section
+          ul.right
+            li
+              a.upper href=articles_path Aktualności
+            li.has-dropdown
+              a.upper href=about_path Kancelaria
+              ul.dropdown
                 li
-                  a.upper href='#' Porady on-line
-                li.has-dropdown
-                  a.upper href='#' Kalkulatory
-                  ul.dropdown
-                    li
-                      a.upper href='#' Kalkulator Odsetek Ustawowych
-                    li
-                      a.upper href='#' Kalkulator Opłat Sądowych
-                    li
-                      a.upper href='#' Kalkulator Alimentów
+                  a.upper href=about_path O Kancelarii
                 li
-                  a.upper href='#' Kontakt
-
-
-/nav.top-bar[data-topbar]
-/  ul.title-area
-/    li.name
-/      = link_to 'Home', root_path
-/    li.toggle-topbar.menu-icon
-/      a[href="#"]
-/        Menu
-/  .top-bar-section
-/    ul
-/      == render 'layouts/navigation_links'
+                  a.upper href=lawyers_path O Nas
+            li.has-dropdown
+              a.upper href=services_path Usługi
+              ul.dropdown
+                li
+                  a.upper href=services_path Zakres Usług Prawnych
+                li
+                  a.upper href=pricing_path Cennik
+            li
+              a.upper href=advices_path Porady on-line
+            li.has-dropdown
+              a.upper href='#' Kalkulatory
+              ul.dropdown
+                li
+                  a.upper href='#' Kalkulator Odsetek Ustawowych
+                li
+                  a.upper href='#' Kalkulator Opłat Sądowych
+                li
+                  a.upper href='#' Kalkulator Alimentów
+            li
+              a.upper href=contact_path Kontakt
+.row.light-bg.clear-side-margin
+  .large-12.column.text-center
+    img src=image_path('logo.png')

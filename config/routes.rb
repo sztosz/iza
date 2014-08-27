@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   get '/lawyers', to: 'visitors#lawyers'
   get '/services', to: 'visitors#services'
   get '/pricing', to: 'visitors#pricing'
+  get '/advices', to: 'visitors#advices'
+  get '/contact', to: 'visitors#contact'
 end

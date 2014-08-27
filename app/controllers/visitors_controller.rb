@@ -15,4 +15,10 @@ class VisitorsController < ApplicationController
 
   def pricing
   end
+
+  def advices
+  end
+
+  def contact
+  end
 end
