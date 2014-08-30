@@ -13,8 +13,10 @@ html
   body.dark-bg
     header
       == render 'layouts/navigation'
+      .row.divider
     main[role="main"]
       == render 'layouts/messages'
       == yield
+      .row.divider
     footer
       == render 'layouts/footer'

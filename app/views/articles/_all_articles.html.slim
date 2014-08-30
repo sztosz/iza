@@ -5,6 +5,8 @@
       .row
         .column
           a.button href=new_article_path Dodaj artykuł
+.row.divider
+.row
   .small-4.columns.small-push-8
     == render 'categories/categories'
   .small-8.columns.small-pull-4
@@ -12,7 +14,7 @@
       .row
         .small-12.column
           .panel
-            span.label.radius.right = article.category.name
+            span.label.right = article.category.name
             h3
               = article.title
             p

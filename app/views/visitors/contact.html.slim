@@ -1,20 +1,58 @@
 .row
-  h1 Kontakt
+  .small-12.column
+    h1.text-center Kontakt
+.row.divider
 .row
-  .large-12.column
+  .small-12.column
     .row
       .panel
-        | Jesteśmy do Państwa dyspozycji :
+        strong Jesteśmy do Państwa dyspozycji:
         br Poniedziałek – Piątek / od 9.00 do 17.00
-    .row
-      .panel
-        | ul. Manganowa 7 lok. 25
-        br 53-441 Wrocław
-    .row
-      .panel
-        | ul. Włodkowica 10 lok. 10
-        br 50-072 Wrocław
-    .row
-      .panel
         | tel. : +48 604-590-598
-        br e-mail :
+        br
+          a href='mailto:kancelaria@adwokat-wroc.com' e-mail: kancelaria@adwokat-wroc.com
+    .row
+      .panel
+        strong Siedziba:
+        br ul. Włodkowica 10 / 10
+        | 50-072 Wrocław
+    .row
+      .panel#map-canvas
+      = javascript_include_tag('https://maps.googleapis.com/maps/api/js?key=AIzaSyB2kQeOZFuonB83aSjvcIfiww7EyaLwpvI')
+      javascript:
+        function initialize() {
+          var myLatlng = new google.maps.LatLng(51.108400, 17.023573);
+          var mapOptions = {
+            center: myLatlng,
+            zoom: 16,
+            panControl: false,
+            panControlOptions: {
+              position: google.maps.ControlPosition.TOP_RIGHT
+            },
+            zoomControl: true,
+            zoomControlOptions: {
+              style: google.maps.ZoomControlStyle.LARGE,
+              position: google.maps.ControlPosition.LEFT_CENTER
+            },
+            scaleControl: true,
+            streetViewControl: false
+          };
+
+          var map = new google.maps.Map(document.getElementById("map-canvas"),
+                  mapOptions);
+
+          var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            title: 'Kancelaria'
+          });
+
+        }
+        google.maps.event.addDomListener(window, 'resize', initialize);
+        google.maps.event.addDomListener(window, 'load', initialize);
+    .row
+      .panel
+        strong Filia:
+        br ul. Manganowa 7 lok. 25
+        | 53-441 Wrocław
+

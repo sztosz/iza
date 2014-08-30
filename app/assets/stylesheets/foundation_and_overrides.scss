@@ -29,23 +29,17 @@ $include-html-classes: true;
 $include-html-global-classes: $include-html-classes;
 
 // Colors
-$primary-bg-color: #74916B;
-$secondary-bg-color: #C6E3BD;
-$primary-font-color: #B7B7B7;
-
 $font-dark: #b9a581;
 $font-light: #f0d8aa;
 $font-lighter: #fff;
 
-
-// Custom styles
 $dark-bg: url('bg.jpg') repeat;
+$topbar-hover-bg: url('topbar-hover-bg.png') repeat;
 $light-bg: #1D1309;
 $logo-color: #D8C092;
 
-body {
-  background: $light-bg;
-}
+// Custom styles
+
 
 .upper {
   text-transform: uppercase!important;
@@ -78,6 +72,33 @@ body {
   background: none !important;
 }
 
+.divider {
+  min-height: 3rem;
+}
+
+.top-bar .name h1 a:hover {     /* Text logo on the left of the Topbar. */
+  color: $font-light;
+}
+
+#map-canvas{
+  margin: 0px;
+  padding: 0px;
+//  min-height: 20rem;
+  height: 20rem;
+//  max-height: 750px;
+}
+#map-canvas *, #map-canvas *:before, #map-canvas *:after {
+  -moz-box-sizing: content-box!important;
+  -webkit-box-sizing: content-box!important;
+  box-sizing: content-box!important;
+}
+#map-canvas img {
+  max-width: none;
+}
+#map-canvas label {
+  width: auto;
+  display: inline;
+}
 
 // Grid
 
@@ -110,7 +131,7 @@ $body-font-weight: $font-weight-normal;
 // $default-float: left;
 
 // We use these as default colors throughout
-$primary-color: #008CBA;
+$primary-color: #f3a127;
 // $secondary-color: #e7e7e7;
 // $alert-color: #f04124;
 // $success-color: #43AC6A;
@@ -234,13 +255,13 @@ $header-font-color: $font-light;
 // We use these to style anchors
 // $anchor-text-decoration: none;
 // $anchor-text-decoration-hover: none;
-// $anchor-font-color: $primary-color;
+$anchor-font-color: $primary-color;
 // $anchor-font-color-hover: scale-color($primary-color, $lightness: -14%);
 
 // We use these to style the <hr> element
 // $hr-border-width: 1px;
 // $hr-border-style: solid;
-// $hr-border-color: #ddd;
+$hr-border-color: $font-light;
 // $hr-margin: rem-calc(20);
 
 // We use these to style lists
@@ -296,15 +317,15 @@ $header-font-color: $font-light;
 // $include-html-accordion-classes: $include-html-classes;
 
 // $accordion-navigation-padding: rem-calc(16);
-// $accordion-navigation-bg-color: #efefef  ;
-// $accordion-navigation-hover-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -5%);
+$accordion-navigation-bg-color: $light-bg  ;
+$accordion-navigation-hover-bg-color: $primary-color;
 // $accordion-navigation-active-bg-color: scale-color($accordion-navigation-bg-color, $lightness: -3%);
-// $accordion-navigation-font-color: #222;
+$accordion-navigation-font-color: $font-light;
 // $accordion-navigation-font-size: rem-calc(16);
 // $accordion-navigation-font-family: $body-font-family;
 
 // $accordion-content-padding: $column-gutter/2;
-// $accordion-content-active-bg-color: #fff;
+$accordion-content-active-bg-color: $dark-bg;
 
 // Alert Boxes
 
@@ -366,7 +387,7 @@ $header-font-color: $font-light;
 // $include-html-nav-classes: $include-html-classes;
 
 // We use this to set the background color for the breadcrumb container.
-// $crumb-bg: scale-color($secondary-color, $lightness: 55%);
+$crumb-bg: $light-bg;
 
 // We use these to set the padding around the breadcrumbs.
 // $crumb-padding: rem-calc(9 14 9);
@@ -382,7 +403,7 @@ $header-font-color: $font-light;
 // We use these to set various text styles for breadcrumbs.
 // $crumb-font-size: rem-calc(11);
 // $crumb-font-color: $primary-color;
-// $crumb-font-color-current: #333;
+$crumb-font-color-current: $font-dark;
 // $crumb-font-color-unavailable: #999;
 // $crumb-font-transform: uppercase;
 // $crumb-link-decor: underline;
@@ -424,7 +445,7 @@ $header-font-color: $font-light;
 // We use these to control button border and hover styles.
 // $button-border-width: 0px;
 // $button-border-style: solid;
-// $button-bg-color: $primary-color;
+$button-bg-color: $primary-color;
 // $button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-factor);
 // $button-border-color: $button-bg-hover;
 // $secondary-button-bg-hover: scale-color($secondary-color, $lightness: $button-function-factor);
@@ -885,9 +906,9 @@ $magellan-padding: 0 !important;
 // $include-html-panel-classes: $include-html-classes;
 
 // We use these to control the background and border styles
-// $panel-bg: scale-color(#fff, $lightness: -5%);
-// $panel-border-style: solid;
-// $panel-border-size: 1px;
+$panel-bg: $light-bg;
+$panel-border-style: solid;
+$panel-border-size: 5px;
 
 // We use this % to control how much we darken things on hover
 // $panel-function-factor: -11%;
@@ -898,8 +919,8 @@ $magellan-padding: 0 !important;
 // $panel-padding: rem-calc(20);
 
 // We use these to set default font colors
-// $panel-font-color: #333;
-// $panel-font-color-alt: #fff;
+$panel-font-color: $font-dark;
+$panel-font-color-alt: $font-light;
 
 // $panel-header-adjust: true;
 // $callout-panel-link-color: $primary-color;
@@ -909,16 +930,16 @@ $magellan-padding: 0 !important;
 // $include-html-pricing-classes: $include-html-classes;
 
 // We use this to control the border color
-// $price-table-border: solid 1px #ddd;
+$price-table-border: solid 1px $font-light;
 
 // We use this to control the bottom margin of the pricing table
 // $price-table-margin-bottom: rem-calc(20);
 
 // We use these to control the title styles
-// $price-title-bg: #333;
+$price-title-bg: $light-bg;
 // $price-title-padding: rem-calc(15 20);
 // $price-title-align: center;
-// $price-title-color: #eee;
+$price-title-color: $font-light;
 // $price-title-weight: $font-weight-normal;
 // $price-title-size: rem-calc(16);
 // $price-title-font-family: $body-font-family;
@@ -934,17 +955,17 @@ $magellan-padding: 0 !important;
 
 
 // We use these to control the description styles
-// $price-bg: #fff;
+$price-bg: $dark-bg;
 // $price-desc-color: #777;
 // $price-desc-padding: rem-calc(15);
 // $price-desc-align: center;
 // $price-desc-font-size: rem-calc(12);
 // $price-desc-weight: $font-weight-normal;
 // $price-desc-line-height: 1.4;
-// $price-desc-bottom-border: dotted 1px #ddd;
+$price-desc-bottom-border: dotted 1px $font-light;
 
 // We use these to control the list item styles
-// $price-item-color: #333;
+$price-item-color: $font-dark;
 // $price-item-padding: rem-calc(15);
 // $price-item-align: center;
 // $price-item-font-size: rem-calc(14);
@@ -1261,7 +1282,7 @@ $sub-nav-active-cursor: default;
 
 // Background color for the top bar
 //$topbar-bg-color: #333;
-//$topbar-bg: $topbar-bg-color;
+$topbar-bg: $dark-bg;
 
 // Height and margin
 // $topbar-height: 45px;
@@ -1272,9 +1293,9 @@ $sub-nav-active-cursor: default;
 // $topbar-title-font-size: rem-calc(17);
 
 // Style the top bar dropdown elements
-// $topbar-dropdown-bg: #333;
-// $topbar-dropdown-link-color: #fff;
-// $topbar-dropdown-link-bg: #333;
+$topbar-dropdown-bg: $dark-bg;
+$topbar-dropdown-link-color: $font-dark;
+$topbar-dropdown-link-bg: $dark-bg;
 // $topbar-dropdown-link-weight: $font-weight-normal;
 // $topbar-dropdown-toggle-size: 5px;
 // $topbar-dropdown-toggle-color: #fff;
@@ -1282,7 +1303,7 @@ $sub-nav-active-cursor: default;
 
 // Set the link colors and styles for top-level nav
 $topbar-link-color: $font-dark;
-// $topbar-link-color-hover: #fff;
+$topbar-link-color-hover: $font-light;
 // $topbar-link-color-active: #fff;
 // $topbar-link-color-active-hover: #fff;
 // $topbar-link-weight: $font-weight-normal;
@@ -1290,7 +1311,7 @@ $topbar-link-color: $font-dark;
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
 $topbar-link-bg: $dark-bg;
 // $topbar-link-bg-color-hover: #555555;
-// $topbar-link-bg-hover: #272727;
+$topbar-link-bg-hover: $topbar-hover-bg;
 // $topbar-link-bg-active: $primary-color;
 // $topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%);
 // $topbar-link-font-family: $body-font-family;

@@ -1,6 +1,10 @@
 toolbar:
-  - styleselect | bold italic | link | undo redo | fullscreen
+  - styleselect | bold italic | link | forecolor backcolor | undo redo | fullscreen
 
 plugins:
   - fullscreen
   - link
+  - textcolor
+
+formats:
+  forecolor: { styles : {color : '#b9a581'} }

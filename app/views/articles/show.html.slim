@@ -1,20 +1,21 @@
 .row
-  .row
-    h1 Aktualności Prawne
-  .row
-    nav.breadcrumbs.large-8.columns
-      a href=articles_path Aktualności
-      a href=category_path(@article.category.id) =@article.category.name
-      a.current href=article_path =@article.title
-  .row
-    .large-4.columns.large-push-8
-      == render 'categories/categories'
-    .large-8.columns.large-pull-4
-      .row
-        .panel
-          h3 = @article.title
+  h1.text-center Aktualności Prawne
+.row.divider
+.row
+  nav.breadcrumbs.large-8.columns
+    a href=articles_path Aktualności
+    a href=category_path(@article.category.id) =@article.category.name
+    a.current href=article_path =@article.title
+.row.divider
+.row
+  .large-4.columns.large-push-8
+    == render 'categories/categories'
+  .large-8.columns.large-pull-4
+    .row
+      .panel
+        h3 = @article.title
+        p
+          = @article.content.html_safe
+        - if admin_signed_in?
           p
-            = @article.content.html_safe
-          - if admin_signed_in?
-            p
-              a.button.tiny href=edit_article_path(@article.id) Edytuj
+            a.button.tiny href=edit_article_path(@article.id) Edytuj
