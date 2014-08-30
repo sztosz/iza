@@ -24,7 +24,7 @@ gem 'capistrano-bundler', '~> 1.1.2'
 gem 'capistrano-rails', '~> 1.1.1'
 gem 'capistrano-rbenv', github: "capistrano/rbenv"
 
-gem "net-ssh"
+gem 'net-ssh', "~> 2.7.0"
 
 group :development do
   gem 'better_errors'
