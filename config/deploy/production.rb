@@ -15,7 +15,7 @@ role :db,  %w{deploy@iza.sztosz.tk}
 # something that quacks like a hash can be used to set
 # extended properties on the server.
 set :password, ask('Server password', nil)
-server 'iza.sztosz.tk', user: 'deploy', roles: %w{web app}
+server '178.62.150.15', user: 'deploy', roles: %w{web app}
 
 # you can set custom ssh options
 # it's possible to pass any option but you need to keep in mind that net/ssh understand limited list of options
