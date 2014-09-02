@@ -33,7 +33,7 @@ $font-dark: #b9a581;
 $font-light: #f0d8aa;
 $font-lighter: #fff;
 
-$dark-bg: url('bg.jpg') repeat;
+$dark-bg: asset-data-url('bg.jpg') repeat;
 $topbar-hover-bg: asset-data-url('topbar-hover-bg.png') repeat;
 $light-bg: #1D1309;
 $logo-color: #D8C092;
