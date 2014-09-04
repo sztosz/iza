@@ -14,47 +14,46 @@
 .row
   .contain-to-grid.sticky
     nav.top-bar data-topbar=true role='navigation' data-options='sticky_on: large'
+      ul.title-area
+        li.name
+          h1
+            a.upper href=root_path Strona Główna
+          /<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+        li.toggle-topbar.menu-icon
+          a.upper href="#"
+            span
+      /<!-- Right Nav Section -->
       section.top-bar-section
-        ul.title-area
-          li.name
-            h1
-              a.upper href=root_path Strona Główna
-            /<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-          li.toggle-topbar.menu-icon
-            a.upper href="#"
-              span
-        /<!-- Right Nav Section -->
-        section.top-bar-section
-          ul.right
-            li
-              a.upper href=articles_path Aktualności
-            li.has-dropdown
-              a.upper href=about_path Kancelaria
-              ul.dropdown
-                li
-                  a.upper href=about_path O Kancelarii
-                li
-                  a.upper href=lawyers_path O Nas
-            li.has-dropdown
-              a.upper href=services_path Usługi
-              ul.dropdown
-                li
-                  a.upper href=services_path Zakres Usług Prawnych
-                li
-                  a.upper href=pricing_path Cennik
-            li
-              a.upper href=advices_path Porady on-line
-            li.has-dropdown
-              a.upper href='#' Kalkulatory
-              ul.dropdown
-                li
-                  a.upper href='#' Kalkulator Odsetek Ustawowych
-                li
-                  a.upper href='#' Kalkulator Opłat Sądowych
-                li
-                  a.upper href='#' Kalkulator Alimentów
-            li
-              a.upper href=contact_path Kontakt
+        ul.right
+          li
+            a.upper href=articles_path Aktualności
+          li.has-dropdown
+            a.upper href=about_path Kancelaria
+            ul.dropdown
+              li
+                a.upper href=about_path O Kancelarii
+              li
+                a.upper href=lawyers_path O Nas
+          li.has-dropdown
+            a.upper href=services_path Usługi
+            ul.dropdown
+              li
+                a.upper href=services_path Zakres Usług Prawnych
+              li
+                a.upper href=pricing_path Cennik
+          li
+            a.upper href=advices_path Porady on-line
+          li.has-dropdown
+            a.upper href='#' Kalkulatory
+            ul.dropdown
+              li
+                a.upper href='#' Kalkulator Odsetek Ustawowych
+              li
+                a.upper href='#' Kalkulator Opłat Sądowych
+              li
+                a.upper href='#' Kalkulator Alimentów
+          li
+            a.upper href=contact_path Kontakt
 .row.light-bg.clear-side-margin
   .small-12.column.text-center
     img src=image_path('logo.png')
