@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :articles
   resources :categories
+  resources :contacts, only: [:new, :create]
   devise_for :admins
   root to: 'visitors#index'
   get '/about', to: 'visitors#about'
@@ -8,5 +9,5 @@ Rails.application.routes.draw do
   get '/services', to: 'visitors#services'
   get '/pricing', to: 'visitors#pricing'
   get '/advices', to: 'visitors#advices'
-  get '/contact', to: 'visitors#contact'
+  get '/contacts', to: 'contacts#new'
 end

@@ -17,6 +17,7 @@ gem 'devise'
 gem 'tinymce-rails'
 gem 'font-awesome-rails'
 gem 'simple_form'
+gem 'mail_form'
 
 #Capistrano
 gem 'capistrano', '~> 3.2.0'
