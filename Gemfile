@@ -18,12 +18,13 @@ gem 'tinymce-rails'
 gem 'font-awesome-rails'
 gem 'simple_form'
 gem 'mail_form'
+gem 'figaro', github: 'laserlemon/figaro'
 
 #Capistrano
 gem 'capistrano', '~> 3.2.0'
 gem 'capistrano-bundler', '~> 1.1.2'
 gem 'capistrano-rails', '~> 1.1.1'
-gem 'capistrano-rbenv', github: "capistrano/rbenv"
+gem 'capistrano-rbenv', github: 'capistrano/rbenv'
 
 gem 'net-ssh', "~> 2.7.0"
 

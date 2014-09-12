@@ -9,8 +9,8 @@ class Contact < MailForm::Base
   def headers
     {
       :subject => "My Contact Form",
-      :to => "izabela.chad@gmail.com",
-      :from => %("#{name} <#{email}>")
+      :to => "#{Figaro.env.smtp_user_name!} <#{Figaro.env.smtp_user_name!}>",
+      :from => "#{Figaro.env.smtp_user_name!} <#{Figaro.env.smtp_user_name!}>"
     }
   end
 end

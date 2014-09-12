@@ -1,6 +1,5 @@
-.small-12.column
-  .h3 Skontaktuj się z nami
-  == simple_form_for @contact do |f|
+.h3 Skontaktuj się z nami
+== simple_form_for @contact do |f|
   = f.input :name, :required => true
   = f.input :email, :required => true
   = f.input :message, :as => :text, :required => true
