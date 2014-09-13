@@ -8,7 +8,7 @@ class Contact < MailForm::Base
   # in ActionMailer accepts.
   def headers
     {
-      :subject => "My Contact Form",
+      :subject => "Nowa wiadomość ze strony",
       :to => "#{Figaro.env.smtp_user_name!} <#{Figaro.env.smtp_user_name!}>",
       :from => "#{Figaro.env.smtp_user_name!} <#{Figaro.env.smtp_user_name!}>"
     }
