@@ -1,14 +1,14 @@
 class AdvicesController < ApplicationController
   def new
-    @contact = Advice.new
+    @advice = Advice.new
   end
 
   def create
-    @contact = Advice.new(params[:advice])
-    @contact.request = request
-    if @contact.deliver
+    @advice = Advice.new(params[:advice])
+    @advice.request = request
+    if @advice.deliver
       flash[:notice] = 'Dziękujmy za skontaktowanie się, odpowiemy wkrótce!'
-      redirect_to contacts_path
+      redirect_to advices_path
     else
       flash[:error] = 'Nie można wysłać wiadomości.'
       render 'new'
