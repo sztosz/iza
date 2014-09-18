@@ -1,0 +1,16 @@
+h3 Porady On-Line
+== simple_form_for @advice, html: {multipart: true} do |f|
+  .small-6.column
+    = f.input :name, :required => true, label: 'Imię i Nazwisko'
+    = f.input :email, :required => true, label: 'Adres email'
+    = f.input :phone, :required => true, label: 'Telefon'
+  .small-6.column
+    = f.input :street, :required => true, label: 'Ulica'
+    = f.input :city, :required => true, label: 'Miasto'
+    = f.input :zip, :required => true, label: 'Kod Pocztowy'
+  = f.input :message, :as => :text, :required => true, input_html: { :rows => 20 }, label: 'Twoja wiadomość'
+  .row.hidden
+    = f.input :nickname, :captcha => true
+  = f.input :file, as: :file, label: 'Załącznik'
+  = f.button :submit, 'Wyślij wiadomość'
+// http://rubyonrailshelp.wordpress.com/2014/01/08/rails-4-simple-form-and-mail-form-to-make-contact-form/
