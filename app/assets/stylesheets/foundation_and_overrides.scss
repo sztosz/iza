@@ -119,6 +119,14 @@ $logo-color: #D8C092;
   color: #f3a127;
 }
 
+.no-bottom-padding {
+  padding-bottom: 0!important;
+}
+
+.no-bottom-margin {
+  margin-bottom: 0!important;
+}
+
 // Grid
 
 // $include-html-grid-classes: $include-html-classes;
