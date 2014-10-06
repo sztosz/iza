@@ -7,4 +7,4 @@ plugins:
   - textcolor
 
 formats:
-  forecolor: { styles : {color : '#b9a581'} }
+  forecolor: { styles : {color : '#000'} }
