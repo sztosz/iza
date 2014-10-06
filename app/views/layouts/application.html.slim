@@ -10,13 +10,16 @@ html
     == javascript_include_tag 'vendor/modernizr'
     == javascript_include_tag 'application', 'data-turbolinks-track' => true
     == csrf_meta_tags
-  body.dark-bg
-    header
-      == render 'layouts/navigation'
-      .row.divider
-    main[role="main"]
-      == render 'layouts/messages'
-      == yield
-      .row.divider
-    footer
-      == render 'layouts/footer'
+  body.main-bg
+    .ouline-box
+      .main-bg
+        header
+          == render 'layouts/navigation'
+          .row.divider
+        main.main-bg[role="main"]
+          == render 'layouts/messages'
+          == yield
+          .row.divider
+        footer
+          == render 'layouts/footer'
+      == render 'layouts/copyright'
