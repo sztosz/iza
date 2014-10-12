@@ -20,4 +20,5 @@
             p
               = article.abstract.html_safe
               a href=article_path(article.id) =" Czytaj więcej..."
-            small = 'Autor: ' + article.admin.name
+              h4.right
+                small = 'Autor: ' + article.admin.name
