@@ -5,7 +5,7 @@ html
     meta[http-equiv="Content-Type" content="text/html" charset="utf-8"]
     title
       = content_for?(:title) ? yield(:title) : 'Kancelaria'
-    meta name="description" content="#{content_for?(:description) ? yield(:description) : 'Iza'}"
+    meta name="description" content="#{content_for?(:description) ? yield(:description) : 'Kancelaria Adwokacka Izabela Chadryś-Nowak'}"
     == stylesheet_link_tag "application", :media => 'all', 'data-turbolinks-track' => true
     / Modernizr is required for Zurb Foundation
     == javascript_include_tag 'vendor/modernizr'
